@@ -1,14 +1,18 @@
-import hairdresser from "./assets/hairdresser.png";
-import "./App.css";
+import React from "react";
+import "App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Home } from "pages/HomePage";
+import { ConstructionPage } from "pages/ConstructionPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={hairdresser} className="App-logo" alt="logo" />
-        <h2>Strona w przebudowie</h2>
-        <h3>www.salonjulia.pl</h3>
-      </header>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={ConstructionPage} exact />
+          <Route path="/test" component={Home} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
