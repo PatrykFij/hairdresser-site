@@ -1,5 +1,4 @@
 /* eslint-disable */
-require("dotenv-flow").config();
 const express = require("express");
 const path = require("path");
 
